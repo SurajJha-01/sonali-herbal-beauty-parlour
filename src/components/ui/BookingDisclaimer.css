@@ -1,0 +1,25 @@
+/* BookingDisclaimer.css */
+.booking-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--espresso-mid);
+  background: var(--cream);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: var(--space-3) var(--space-4);
+  margin-top: var(--space-4);
+  line-height: 1.5;
+}
+
+.booking-disclaimer--light {
+  background: rgba(255,253,249,0.16);
+  border-left-color: var(--soft-blush);
+  color: var(--white);
+}
+
+.booking-disclaimer__icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}

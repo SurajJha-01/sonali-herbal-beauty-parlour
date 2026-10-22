@@ -1,0 +1,509 @@
+/* ═════════════════════════════════════════════════════════════════════════════
+   Bridal.css — Premium Bridal Landing Page Styles
+   Palette: Warm Ivory, Champagne Gold, Soft Rose, Earthy Green & Rich Espresso
+   ═════════════════════════════════════════════════════════════════════════════ */
+
+/* ─── Bridal Hero ────────────────────────────────────────────────────────────── */
+.bridal-hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--espresso);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: var(--ivory);
+  padding: var(--space-20) 0;
+  overflow: hidden;
+}
+
+.bridal-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(48, 36, 43, 0.9) 0%,
+    rgba(103, 45, 70, 0.82) 55%,
+    rgba(103, 45, 70, 0.72) 100%
+  );
+  z-index: 1;
+}
+
+.bridal-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.bridal-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: rgba(217, 130, 152, 0.2);
+  border: 1px solid var(--rose);
+  color: var(--rose-light);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-full);
+  letter-spacing: 0.05em;
+  backdrop-filter: blur(6px);
+}
+
+.bridal-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ivory);
+}
+
+.bridal-hero__subtitle {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: clamp(var(--text-lg), 2.5vw, var(--text-2xl));
+  color: var(--soft-blush);
+}
+
+.bridal-hero__desc {
+  font-size: clamp(var(--text-base), 1.8vw, var(--text-lg));
+  color: var(--white);
+  line-height: 1.8;
+  max-width: 680px;
+}
+
+.bridal-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+}
+
+.bridal-hero .btn--outline {
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.bridal-hero .btn--outline:hover {
+  color: var(--hover-background);
+  background: var(--white);
+  border-color: var(--white);
+}
+
+/* ─── Bridal Philosophy / Personalized Approach ──────────────────────────────── */
+.bridal-intro {
+  background: var(--ivory);
+  padding: var(--space-16) 0;
+  border-bottom: 1px solid var(--gold-light);
+}
+
+.bridal-intro__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-8);
+  margin-top: var(--space-10);
+}
+
+.bridal-intro-card {
+  background: var(--white);
+  border: 1px solid var(--rose-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.bridal-intro-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--rose);
+}
+
+.bridal-intro-card__icon {
+  font-size: 2.2rem;
+  margin-bottom: var(--space-3);
+  width: 64px;
+  height: 64px;
+  background: var(--rose-pale);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bridal-intro-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--espresso);
+  margin-bottom: var(--space-1);
+}
+
+.bridal-intro-card__subtitle {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: var(--text-sm);
+  color: var(--rose);
+  margin-bottom: var(--space-3);
+}
+
+.bridal-intro-card__desc {
+  font-size: var(--text-sm);
+  color: var(--espresso-mid);
+  line-height: 1.65;
+}
+
+/* ─── Pre-Bridal Preparation Timeline ────────────────────────────────────────── */
+.bridal-timeline-section {
+  background: linear-gradient(135deg, var(--ivory-deep) 0%, var(--cream) 100%);
+  position: relative;
+}
+
+.bridal-timeline {
+  max-width: 860px;
+  margin: var(--space-12) auto 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.bridal-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 28px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold), var(--rose), var(--green));
+}
+
+@media (min-width: 768px) {
+  .bridal-timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.bridal-timeline-step {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .bridal-timeline-step {
+    width: 50%;
+  }
+
+  .bridal-timeline-step:nth-child(odd) {
+    align-self: flex-start;
+    padding-right: var(--space-10);
+    text-align: right;
+    flex-direction: row-reverse;
+  }
+
+  .bridal-timeline-step:nth-child(even) {
+    align-self: flex-end;
+    padding-left: var(--space-10);
+    text-align: left;
+  }
+}
+
+.bridal-timeline-step__marker {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  background: var(--espresso);
+  color: var(--white);
+  border: 2px solid var(--gold);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: var(--shadow-md);
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .bridal-timeline-step:nth-child(odd) .bridal-timeline-step__marker {
+    position: absolute;
+    right: -28px;
+    top: 0;
+  }
+
+  .bridal-timeline-step:nth-child(even) .bridal-timeline-step__marker {
+    position: absolute;
+    left: -28px;
+    top: 0;
+  }
+}
+
+.bridal-timeline-step__content {
+  background: var(--white);
+  border: 1px solid var(--gold-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  flex-grow: 1;
+}
+
+.bridal-timeline-step__period {
+  display: inline-block;
+  background: var(--rose-pale);
+  color: var(--espresso);
+  border: 1px solid var(--rose);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  padding: 2px var(--space-3);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-2);
+}
+
+.bridal-timeline-step__title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--espresso);
+  margin-bottom: var(--space-2);
+}
+
+.bridal-timeline-step__desc {
+  font-size: var(--text-sm);
+  color: var(--espresso-mid);
+  line-height: 1.6;
+}
+
+/* ─── Bridal Services Focus ──────────────────────────────────────────────────── */
+.bridal-services-focus {
+  background-color: var(--ivory);
+}
+
+.bridal-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-8);
+  margin-top: var(--space-10);
+}
+
+.bridal-service-item {
+  background: var(--white);
+  border: 1px solid rgba(248, 232, 236, 0.36);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.bridal-service-item:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--gold);
+}
+
+.bridal-service-item__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.bridal-service-item__icon {
+  font-size: 1.8rem;
+}
+
+.bridal-service-item__title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--espresso);
+}
+
+.bridal-service-item__desc {
+  font-size: var(--text-sm);
+  color: var(--espresso-mid);
+  line-height: 1.65;
+  flex-grow: 1;
+}
+
+.bridal-service-item__tag {
+  font-size: var(--text-xs);
+  color: var(--gold-dark);
+  font-weight: 600;
+  background: var(--cream);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  width: fit-content;
+}
+
+/* ─── Bridal Gallery Showcase ────────────────────────────────────────────────── */
+.bridal-gallery-section {
+  background: var(--ivory-deep);
+}
+
+.bridal-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-10);
+}
+
+.bridal-gallery-card {
+  position: relative;
+  height: 380px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--white);
+  background-color: var(--cream);
+  z-index: 1;
+  transition: transform 300ms cubic-bezier(0.25, 1, 0.5, 1),
+              box-shadow 300ms cubic-bezier(0.25, 1, 0.5, 1),
+              border-color 300ms ease;
+  will-change: transform;
+}
+
+.bridal-gallery-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  transition: transform 300ms cubic-bezier(0.25, 1, 0.5, 1),
+              object-position 300ms ease;
+  display: block;
+}
+
+.bridal-gallery-card__overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  background: linear-gradient(
+    to top,
+    rgba(48, 36, 43, 0.86) 0%,
+    rgba(48, 36, 43, 0.44) 60%,
+    transparent 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-6) var(--space-4) var(--space-3);
+  color: var(--ivory);
+  transition: background 300ms ease;
+  pointer-events: none;
+}
+
+.bridal-gallery-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--ivory);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  line-height: 1.3;
+  margin-bottom: 2px;
+}
+
+.bridal-gallery-card__subtitle {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: var(--text-xs);
+  color: var(--white);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* ─── Hover Interaction (Mouse / Pointer only) ────────────────────────────── */
+@media (hover: hover) and (pointer: fine) {
+  .bridal-gallery-card:hover {
+    z-index: 20;
+    transform: scale(1.08) translateY(-6px);
+    box-shadow: 0 12px 28px rgba(48, 36, 43, 0.2), 0 4px 12px rgba(103, 45, 70, 0.12);
+    border-color: var(--gold);
+  }
+
+  .bridal-gallery-card:hover .bridal-gallery-card__img {
+    object-position: center 22%;
+    transform: scale(1.02);
+  }
+
+  .bridal-gallery-card:hover .bridal-gallery-card__overlay {
+    background: linear-gradient(
+      to top,
+      rgba(48, 36, 43, 0.9) 0%,
+      rgba(48, 36, 43, 0.35) 65%,
+      transparent 100%
+    );
+  }
+}
+
+/* ─── Accessibility: Reduced Motion ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .bridal-gallery-card,
+  .bridal-gallery-card__img,
+  .bridal-gallery-card__overlay {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* ─── Bridal CTA & Consultation Box ──────────────────────────────────────────── */
+.bridal-cta-section {
+  background: var(--deep-plum);
+  color: var(--ivory);
+  text-align: center;
+  padding: var(--space-16) 0;
+  border-top: 2px solid var(--gold);
+}
+
+.bridal-cta-box {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.bridal-cta-box__badge {
+  color: var(--white);
+  font-size: var(--text-sm);
+  background: rgba(217, 130, 152, 0.16);
+  border: 1px solid var(--rose-accent);
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-full);
+}
+
+.bridal-cta-box__title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+  color: var(--ivory);
+}
+
+.bridal-cta-box__desc {
+  font-size: var(--text-base);
+  color: var(--white);
+  line-height: 1.8;
+  max-width: 680px;
+}
+
+.bridal-cta-box__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+}

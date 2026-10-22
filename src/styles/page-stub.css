@@ -1,0 +1,46 @@
+/* page-stub.css — Shared stub styles used by all page stubs during development */
+.page-stub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  text-align: center;
+  padding: var(--space-16) var(--space-6);
+  gap: var(--space-4);
+}
+
+.page-stub__icon {
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: var(--space-2);
+  animation: floatUp 3s ease-in-out infinite;
+}
+
+.page-stub__title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+  font-weight: 700;
+  color: var(--espresso);
+  background: linear-gradient(135deg, var(--espresso) 0%, var(--gold-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-stub__subtitle {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: var(--text-xl);
+  color: var(--gold);
+}
+
+.page-stub__note {
+  font-size: var(--text-sm);
+  color: var(--espresso-mid);
+  background: var(--cream);
+  border: 1px dashed var(--gold-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-5);
+  margin-top: var(--space-4);
+}

@@ -1,0 +1,341 @@
+/* ═════════════════════════════════════════════════════════════════════════════
+   About.css — Premium styles for Sonali Herbal Beauty Parlour About Us Page
+   Palette: Ivory, Rose Pink, Deep Plum & Soft Blush
+   ═════════════════════════════════════════════════════════════════════════════ */
+
+/* ─── About Header ───────────────────────────────────────────────────────────── */
+.about-header {
+  background: var(--deep-plum);
+  color: var(--ivory);
+  padding: var(--space-16) 0 var(--space-12);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid var(--gold);
+}
+
+.about-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(var(--gold-glow) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.about-header__content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.about-header__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: rgba(217, 130, 152, 0.16);
+  border: 1px solid var(--rose-accent);
+  color: var(--white);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-full);
+}
+
+.about-header__title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+  font-weight: 700;
+  color: var(--ivory);
+}
+
+.about-header__subtitle {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: var(--text-xl);
+  color: var(--soft-blush);
+}
+
+.about-header__desc {
+  font-size: clamp(var(--text-base), 1.8vw, var(--text-lg));
+  color: var(--white);
+  line-height: 1.8;
+  max-width: 680px;
+}
+
+/* ─── Owner Spotlight ────────────────────────────────────────────────────────── */
+.about-owner {
+  background-color: var(--ivory);
+  padding: var(--space-16) 0;
+}
+
+.about-owner__card {
+  max-width: 820px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--gold-light);
+  border-radius: var(--radius-xl);
+  padding: var(--space-10) var(--space-8);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-owner__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--green), var(--gold), var(--rose));
+}
+
+.about-owner__icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto var(--space-4);
+  display: block;
+  border: 2px solid var(--gold);
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  box-shadow: var(--shadow-sm);
+  animation: owner-portrait-float 3.5s ease-in-out infinite;
+}
+
+@keyframes owner-portrait-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.about-owner__badge {
+  display: inline-block;
+  background: var(--green-pale);
+  color: var(--green);
+  border: 1px solid var(--green-light);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  padding: 2px var(--space-3);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-2);
+}
+
+.about-owner__name {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl));
+  color: var(--espresso);
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+.about-owner__role {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: var(--text-base);
+  color: var(--gold-dark);
+  margin-bottom: var(--space-4);
+}
+
+.about-owner__text {
+  font-size: var(--text-base);
+  color: var(--espresso-mid);
+  line-height: 1.8;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ─── Philosophy & Core Values ───────────────────────────────────────────────── */
+.about-values {
+  background: var(--ivory-deep);
+  padding: var(--space-16) 0;
+}
+
+.about-values__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-10);
+}
+
+.about-value-card {
+  background: var(--white);
+  border: 1px solid var(--gold-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.about-value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--gold);
+}
+
+.about-value-card__icon {
+  font-size: 2.2rem;
+  margin-bottom: var(--space-3);
+  width: 64px;
+  height: 64px;
+  background: var(--cream);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gold-light);
+}
+
+.about-value-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--espresso);
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+
+.about-value-card__subtitle {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: var(--text-xs);
+  color: var(--gold-dark);
+  margin-bottom: var(--space-3);
+}
+
+.about-value-card__desc {
+  font-size: var(--text-sm);
+  color: var(--espresso-mid);
+  line-height: 1.65;
+}
+
+/* ─── Business Info Cards ────────────────────────────────────────────────────── */
+.about-info-section {
+  background: var(--ivory);
+  padding: var(--space-16) 0;
+}
+
+.about-info__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-8);
+  margin-top: var(--space-10);
+}
+
+.about-info-card {
+  background: var(--white);
+  border: 1px solid var(--gold-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-3);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.about-info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--gold);
+}
+
+.about-info-card__icon {
+  font-size: 2rem;
+}
+
+.about-info-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--espresso);
+}
+
+.about-info-card__text {
+  font-size: var(--text-base);
+  color: var(--espresso-mid);
+  line-height: 1.7;
+}
+
+.about-info-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--green);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  margin-top: auto;
+  transition: color var(--transition-fast), gap var(--transition-fast);
+}
+
+.about-info-card__link:hover {
+  color: var(--gold-dark);
+  gap: var(--space-3);
+}
+
+/* ─── About Bottom CTA ───────────────────────────────────────────────────────── */
+.about-cta-section {
+  background: var(--deep-plum);
+  color: var(--ivory);
+  padding: var(--space-16) 0;
+  border-top: 2px solid var(--gold);
+  text-align: center;
+}
+
+.about-cta-box {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.about-cta-box__title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+  color: var(--ivory);
+}
+
+.about-cta-box__desc {
+  font-size: var(--text-base);
+  color: var(--white);
+  line-height: 1.8;
+  max-width: 660px;
+}
+
+.about-cta-box__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+}
+
+/* ─── Accessibility: Reduced Motion ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .about-owner__card,
+  .about-owner__icon,
+  .about-value-card,
+  .about-info-card {
+    transition: none !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}

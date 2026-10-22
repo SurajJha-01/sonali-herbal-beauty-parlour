@@ -1,0 +1,425 @@
+html[data-theme='dark'] {
+  color-scheme: dark;
+  --background: #101a28;
+  --soft-blush: #19283a;
+  --rose-accent: #9bdcf2;
+  --deep-plum: #1b3550;
+  --heading-text: #b9e9f5;
+  --main-text: #edf5fa;
+  --secondary-text: #bacbd8;
+  --border: #344b61;
+  --hover-background: #294c68;
+  --focus-outline: #b3e7f5;
+  --white: #f3f8fb;
+  --ivory: #101a28;
+  --ivory-deep: #152235;
+  --cream: #1d3045;
+  --gold: #cfad68;
+  --gold-light: #5d523d;
+  --gold-dark: #e0c37f;
+  --gold-glow: rgba(207, 173, 104, 0.2);
+  --green: #8ab6a4;
+  --green-light: #344f49;
+  --green-pale: #202f34;
+  --espresso: #edf5fa;
+  --espresso-mid: #bacbd8;
+  --rose: #9bdcf2;
+  --rose-light: #c0e8f2;
+  --rose-pale: #1c2c40;
+  --overlay: rgba(6, 13, 23, 0.82);
+}
+
+html[data-theme='dark'] body {
+  color: var(--main-text);
+  background: var(--background);
+}
+
+html[data-theme='dark'] .navbar,
+html[data-theme='dark'] .navbar--scrolled,
+html[data-theme='dark'] .navbar__drawer {
+  background: rgba(16, 27, 42, 0.98);
+}
+
+html[data-theme='dark'] .navbar__brand-name,
+html[data-theme='dark'] .navbar__brand-sub,
+html[data-theme='dark'] .navbar__brand-icon,
+html[data-theme='dark'] .navbar__language,
+html[data-theme='dark'] .navbar__link,
+html[data-theme='dark'] .navbar__link:hover,
+html[data-theme='dark'] .navbar__link--active,
+html[data-theme='dark'] .navbar__drawer-link,
+html[data-theme='dark'] .navbar__drawer-link:hover,
+html[data-theme='dark'] .navbar__drawer-link--active,
+html[data-theme='dark'] .navbar__hamburger-bar {
+  color: var(--main-text);
+  -webkit-text-fill-color: var(--main-text);
+}
+
+html[data-theme='dark'] .navbar__brand-sub {
+  color: var(--secondary-text);
+  -webkit-text-fill-color: var(--secondary-text);
+}
+
+html[data-theme='dark'] .navbar__theme {
+  color: var(--heading-text);
+  background: #1c2d42;
+  border-color: #4b5a64;
+}
+
+html[data-theme='dark'] .navbar__theme:hover,
+html[data-theme='dark'] .navbar__language:hover,
+html[data-theme='dark'] .navbar__hamburger:hover {
+  background: #294158;
+}
+
+html[data-theme='dark'] .navbar__backdrop {
+  background: rgba(0, 0, 0, 0.62);
+}
+
+html[data-theme='dark'] .services-header,
+html[data-theme='dark'] .gallery-header,
+html[data-theme='dark'] .about-header,
+html[data-theme='dark'] .bridal-hero,
+html[data-theme='dark'] .home-cta__box {
+  color: #eef3ed;
+}
+
+html[data-theme='dark'] .services-header__title,
+html[data-theme='dark'] .gallery-header__title,
+html[data-theme='dark'] .about-header__title,
+html[data-theme='dark'] .bridal-hero__title,
+html[data-theme='dark'] .services-header__subtitle,
+html[data-theme='dark'] .gallery-header__subtitle,
+html[data-theme='dark'] .about-header__subtitle,
+html[data-theme='dark'] .bridal-hero__subtitle,
+html[data-theme='dark'] .section-heading--light .section-heading__title,
+html[data-theme='dark'] .section-heading--light .section-heading__subtitle,
+html[data-theme='dark'] .section-heading--light .section-heading__ornament,
+html[data-theme='dark'] .gallery-modal__title,
+html[data-theme='dark'] .gallery-modal__info {
+  color: #e6c982;
+}
+
+html[data-theme='dark'] .services-filter__btn--active,
+html[data-theme='dark'] .gallery-filter__btn--active {
+  color: #172323;
+  background: #caa45e;
+  border-color: #caa45e;
+}
+
+html[data-theme='dark'] .services-filter__btn--active:hover,
+html[data-theme='dark'] .gallery-filter__btn--active:hover {
+  color: #172323;
+  background: #dfbf75;
+}
+
+html[data-theme='dark'] .bridal-timeline-step__marker,
+html[data-theme='dark'] .gallery-modal__close {
+  color: #eef3ed;
+  background: #173638;
+}
+
+html[data-theme='dark'] .btn--outline {
+  color: #e6c982;
+  border-color: #caa45e;
+}
+
+html[data-theme='dark'] .btn--outline:hover {
+  color: #172323;
+  background: #caa45e;
+  border-color: #caa45e;
+}
+
+html[data-theme='dark'] .footer {
+  color: #eef3ed;
+}
+
+html[data-theme='dark'] .footer__brand-name,
+html[data-theme='dark'] .footer__desc {
+  color: #eef3ed;
+}
+
+html[data-theme='dark'] .footer__heading {
+  color: var(--heading-text);
+}
+
+html[data-theme='dark'] .footer__brand-sub,
+html[data-theme='dark'] .footer__tagline,
+html[data-theme='dark'] .footer__contact-item--coming {
+  color: #d7c69d;
+}
+
+html[data-theme='dark'] .services-filter,
+html[data-theme='dark'] .gallery-filter {
+  background: #152235;
+}
+
+html[data-theme='dark'] .service-card,
+html[data-theme='dark'] .gallery-filter__btn,
+html[data-theme='dark'] .services-filter__btn,
+html[data-theme='dark'] .bridal-intro-card,
+html[data-theme='dark'] .bridal-timeline-step__content,
+html[data-theme='dark'] .bridal-service-item,
+html[data-theme='dark'] .about-owner__card,
+html[data-theme='dark'] .about-value-card,
+html[data-theme='dark'] .about-info-card,
+html[data-theme='dark'] .contact-card,
+html[data-theme='dark'] .home-location__card,
+html[data-theme='dark'] .home-location__map-card,
+html[data-theme='dark'] .location-card,
+html[data-theme='dark'] .contact-location-card {
+  color: var(--main-text);
+  background-color: #1a2a3d;
+  border-color: var(--border);
+}
+
+html[data-theme='dark'] .contact-page {
+  background: #152235;
+}
+
+html[data-theme='dark'] .contact-header,
+html[data-theme='dark'] .contact-section {
+  background: linear-gradient(180deg, #152235, #101a28);
+}
+
+html[data-theme='dark'] .contact-info__title,
+html[data-theme='dark'] .contact-form__title,
+html[data-theme='dark'] .contact-header__title,
+html[data-theme='dark'] .home-location__title,
+html[data-theme='dark'] .home-location__heading {
+  color: var(--heading-text);
+}
+
+html[data-theme='dark'] .contact-page input,
+html[data-theme='dark'] .contact-page textarea,
+html[data-theme='dark'] .contact-page select,
+html[data-theme='dark'] .contact-page .form-input,
+html[data-theme='dark'] .contact-page .form-select,
+html[data-theme='dark'] .contact-page .form-textarea,
+html[data-theme='dark'] .home-location input,
+html[data-theme='dark'] .home-location textarea,
+html[data-theme='dark'] .home-location select {
+  color: var(--main-text);
+  background: #121f30;
+  border-color: var(--border);
+}
+
+html[data-theme='dark'] .contact-page input::placeholder,
+html[data-theme='dark'] .contact-page textarea::placeholder,
+html[data-theme='dark'] .contact-page .form-input::placeholder,
+html[data-theme='dark'] .contact-page .form-textarea::placeholder,
+html[data-theme='dark'] .home-location input::placeholder,
+html[data-theme='dark'] .home-location textarea::placeholder {
+  color: #9aada5;
+}
+
+html[data-theme='dark'] .contact-page .contact-submit,
+html[data-theme='dark'] .home-location .home-location__button,
+html[data-theme='dark'] .home-location .home-location__button--primary {
+  color: #172323;
+  background: #caa45e;
+  border-color: #caa45e;
+}
+
+html[data-theme='dark'] .contact-page .contact-form__error {
+  color: #ffc5cb;
+  background: #3b2424;
+}
+
+html[data-theme='dark'] .contact-page .contact-detail__icon,
+html[data-theme='dark'] .contact-page .contact-map__link,
+html[data-theme='dark'] .contact-page .contact-form__fallback,
+html[data-theme='dark'] .home-location__icon {
+  color: var(--heading-text);
+  background: #203750;
+}
+
+html[data-theme='dark'] .contact-page .contact-info__title,
+html[data-theme='dark'] .contact-page .contact-form__title,
+html[data-theme='dark'] .contact-page .contact-header__title,
+html[data-theme='dark'] .home-location__business h3 {
+  color: var(--heading-text);
+}
+
+html[data-theme='dark'] .contact-page .contact-action {
+  color: var(--heading-text);
+  background: #1d3045;
+  border-color: #5d523d;
+}
+
+html[data-theme='dark'] .contact-page .contact-action--primary {
+  color: #201810;
+  background: #c99d5b;
+  border-color: #c99d5b;
+}
+
+html[data-theme='dark'] .contact-page .contact-action--whatsapp {
+  color: #fff;
+  background: #167346;
+  border-color: #167346;
+}
+
+html[data-theme='dark'] .contact-page .contact-form__fallback {
+  color: #e5d2b7;
+}
+
+html[data-theme='dark'] .home-location__business,
+html[data-theme='dark'] .contact-page .contact-form__header {
+  border-color: var(--border);
+}
+
+html[data-theme='dark'] .home-page {
+  --background: #101a28;
+  --soft-blush: #19283a;
+  --rose-accent: #9bdcf2;
+  --deep-plum: #b9e9f5;
+  --heading-text: #b9e9f5;
+  --main-text: #edf5fa;
+  --secondary-text: #bacbd8;
+  --border: #344b61;
+  --hover-background: #294c68;
+  --focus-outline: #b3e7f5;
+  --ivory: #101a28;
+  --ivory-deep: #152235;
+  --cream: #1d3045;
+  --gold: #cfad68;
+  --gold-light: #5d523d;
+  --gold-dark: #e0c37f;
+  --gold-glow: rgba(207, 173, 104, 0.2);
+  --green: #8ab6a4;
+  --green-light: #344f49;
+  --green-pale: #202f34;
+  --espresso: #edf5fa;
+  --espresso-mid: #bacbd8;
+  --rose: #b9e9f5;
+  --rose-light: #c0e8f2;
+  --rose-pale: #1c2c40;
+  background: var(--background);
+}
+
+html[data-theme='dark'] .home-page .home-hero {
+  background:
+    radial-gradient(ellipse at 82% 18%, rgba(115, 190, 216, 0.17), transparent 38%),
+    linear-gradient(135deg, #1b3048 0%, #101a28 52%, #263c54 100%);
+}
+
+html[data-theme='dark'] .home-page .home-hero__badge,
+html[data-theme='dark'] .home-page .home-bridal__badge {
+  color: #b9e9f5;
+  background: #1d3045;
+  border-color: #5d523d;
+}
+
+html[data-theme='dark'] .home-page .home-hero__brand,
+html[data-theme='dark'] .home-page .home-hero__tagline,
+html[data-theme='dark'] .home-page .home-hero__title {
+  color: #d7f1f8;
+}
+
+html[data-theme='dark'] .home-page .home-hero__actions .btn--phone,
+html[data-theme='dark'] .home-page .home-hero__actions .btn--primary,
+html[data-theme='dark'] .home-page .home-bridal__actions .btn--primary,
+html[data-theme='dark'] .home-page .home-services__cta .btn--primary {
+  color: #172323;
+  background: #caa45e;
+  border-color: #caa45e;
+}
+
+html[data-theme='dark'] .home-page .home-hero__actions .btn--outline {
+  color: #b9e9f5;
+  border-color: #9bdcf2;
+}
+
+html[data-theme='dark'] .home-page .home-hero__actions .btn--outline:hover {
+  color: #172323;
+  background: #9bdcf2;
+}
+
+html[data-theme='dark'] .home-page .home-hero__services-link,
+html[data-theme='dark'] .home-page .home-service-card__link {
+  color: #e3c489;
+}
+
+html[data-theme='dark'] .home-page .home-highlights,
+html[data-theme='dark'] .home-page .home-gallery {
+  background-color: #101a28;
+}
+
+html[data-theme='dark'] .home-page .home-services,
+html[data-theme='dark'] .home-page .home-footer-transition {
+  background-color: #152235;
+}
+
+html[data-theme='dark'] .home-page .home-highlight-card,
+html[data-theme='dark'] .home-page .home-service-card,
+html[data-theme='dark'] .home-page .home-gallery-item {
+  color: var(--main-text);
+  background-color: #1a2a3d;
+  border-color: #344b61;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.22);
+}
+
+html[data-theme='dark'] .home-page .home-highlight-card__icon-wrapper,
+html[data-theme='dark'] .home-page .home-service-card__media {
+  color: #b9e9f5;
+  background: #203750;
+  border-color: #4b5a64;
+}
+
+html[data-theme='dark'] .home-page .home-bridal {
+  background: linear-gradient(135deg, #152235 0%, #101a28 52%, #263c54 100%);
+}
+
+html[data-theme='dark'] .home-page .home-bridal__media {
+  border-color: #344b61;
+}
+
+html[data-theme='dark'] .home-page .home-location {
+  background: linear-gradient(180deg, #101a28, #152235);
+}
+
+html[data-theme='dark'] .home-page .home-location__button,
+html[data-theme='dark'] .home-page .home-location__button--primary {
+  color: #172323;
+  background: #cfad68;
+  border-color: #cfad68;
+}
+
+html[data-theme='dark'] .home-page .home-hero__visual {
+  background: rgba(26, 42, 61, 0.94);
+  border-color: #4b5a64;
+}
+
+html[data-theme='dark'] .home-page .home-hero__image-caption,
+html[data-theme='dark'] .home-page .home-hero__visual-ornament {
+  color: var(--main-text);
+  background: rgba(26, 42, 61, 0.97);
+  border-color: #5d523d;
+}
+
+html[data-theme='dark'] .home-page .home-hero__caption-icon {
+  color: #b9e9f5;
+  background: #203750;
+}
+
+html[data-theme='dark'] .home-page .home-gallery-item__overlay,
+html[data-theme='dark'] .home-page .home-gallery-item__title,
+html[data-theme='dark'] .home-page .home-gallery-item__subtitle {
+  color: #f7f2ec;
+}
+
+html[data-theme='dark'] .contact-widget__card {
+  color: var(--main-text);
+  background: #1a2a3d;
+  border-color: var(--border);
+}
+
+html[data-theme='dark'] .contact-widget__title {
+  color: var(--heading-text);
+}
+
+html[data-theme='dark'] .contact-widget__contacts a {
+  color: var(--heading-text);
+  background: #203750;
+  border-color: #5d523d;
+}

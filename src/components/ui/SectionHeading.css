@@ -1,0 +1,97 @@
+/* SectionHeading.css */
+.section-heading {
+  margin-bottom: var(--space-12);
+}
+
+.section-heading--center { text-align: center; }
+.section-heading--left   { text-align: left; }
+.section-heading--right  { text-align: right; }
+
+/* Ornament */
+.section-heading__ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  color: var(--gold);
+}
+
+.section-heading--left .section-heading__ornament {
+  justify-content: flex-start;
+}
+
+.section-heading__line {
+  flex: 1;
+  max-width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.section-heading--left .section-heading__line:first-child { display: none; }
+
+.section-heading__diamond {
+  font-size: var(--text-xs);
+  color: var(--heading-text);
+  animation: floatUp 3s ease-in-out infinite;
+}
+
+.section-heading--light .section-heading__ornament,
+.section-heading--light .section-heading__diamond {
+  color: var(--soft-blush);
+}
+
+.section-heading--light .section-heading__line {
+  background: linear-gradient(90deg, transparent, var(--soft-blush), transparent);
+}
+
+/* Title */
+.section-heading__title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+  font-weight: 600;
+  color: var(--espresso);
+  line-height: 1.25;
+  margin-bottom: var(--space-3);
+}
+
+.section-heading--light .section-heading__title {
+  color: var(--ivory);
+}
+
+/* Subtitle */
+.section-heading__subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  color: var(--espresso-mid);
+  font-weight: 400;
+  max-width: 560px;
+  margin-inline: auto;
+  line-height: 1.6;
+}
+
+.section-heading--left .section-heading__subtitle {
+  margin-inline: 0;
+}
+
+.section-heading--light .section-heading__subtitle {
+  color: var(--soft-blush);
+}
+
+/* Underline */
+.section-heading__underline {
+  width: 64px;
+  height: 3px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--gold), var(--rose));
+  margin-top: var(--space-4);
+  margin-inline: auto;
+}
+
+.section-heading--light .section-heading__underline {
+  background: linear-gradient(90deg, var(--soft-blush), var(--rose-accent));
+}
+
+.section-heading--left .section-heading__underline {
+  margin-inline: 0;
+}

@@ -1,0 +1,219 @@
+.contact-widget {
+  position: fixed;
+  right: max(var(--space-4), env(safe-area-inset-right));
+  bottom: max(var(--space-4), env(safe-area-inset-bottom));
+  z-index: 950;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-3);
+  font-family: var(--font-body);
+}
+
+.contact-widget__card {
+  position: relative;
+  width: min(19rem, calc(100vw - 2rem));
+  padding: var(--space-5);
+  color: var(--main-text);
+  background: var(--white);
+  border: 1px solid var(--soft-blush);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  animation: contact-widget-enter 220ms ease-out both;
+  max-height: min(70vh, 28rem);
+  overflow-y: auto;
+}
+
+.contact-widget__close {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  color: var(--secondary-text);
+  border-radius: var(--radius-full);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.contact-widget__close:hover {
+  color: var(--deep-plum);
+  background: var(--soft-blush);
+}
+
+.contact-widget__title {
+  max-width: 14rem;
+  padding-right: var(--space-4);
+  color: var(--deep-plum);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.contact-widget__message {
+  margin-top: var(--space-2);
+  color: var(--secondary-text);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.contact-widget__action,
+.contact-widget__contacts a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  color: var(--white);
+  background: var(--deep-plum);
+  border: 1px solid var(--deep-plum);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color var(--transition-base), transform var(--transition-base);
+}
+
+.contact-widget__action:hover,
+.contact-widget__contacts a:hover {
+  background: var(--hover-background);
+  transform: translateY(-1px);
+}
+
+.contact-widget__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.contact-widget__contacts a {
+  flex: 1 1 auto;
+  color: var(--deep-plum);
+  background: var(--soft-blush);
+  border-color: var(--soft-blush);
+}
+
+.contact-widget__contacts a:hover {
+  color: var(--white);
+  background: var(--hover-background);
+  border-color: var(--hover-background);
+}
+
+.contact-widget__launcher {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  width: 3.5rem;
+  height: 3.5rem;
+  place-items: center;
+  color: var(--white);
+  background: linear-gradient(145deg, var(--rose-accent), var(--deep-plum) 68%);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius-full);
+  box-shadow: 0 6px 18px rgba(48, 36, 43, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.24);
+  animation: contact-widget-enter 260ms ease-out both;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), filter var(--transition-base);
+}
+
+.contact-widget__launcher::before {
+  position: absolute;
+  z-index: -1;
+  inset: -3px;
+  border: 1px solid rgba(217, 130, 152, 0.55);
+  border-radius: inherit;
+  content: '';
+  pointer-events: none;
+  animation: contact-widget-ripple 3.2s 700ms ease-out infinite;
+}
+
+.contact-widget__launcher svg {
+  animation: contact-widget-icon-float 3.2s 700ms ease-in-out infinite;
+}
+
+.contact-widget__launcher:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 10px 24px rgba(48, 36, 43, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  filter: saturate(1.12);
+}
+
+.contact-widget__launcher:hover::before,
+.contact-widget__launcher:focus-visible::before {
+  animation-play-state: paused;
+}
+
+.contact-widget__launcher:hover svg {
+  animation-play-state: paused;
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.contact-widget__launcher:focus-visible,
+.contact-widget__close:focus-visible,
+.contact-widget__action:focus-visible,
+.contact-widget__contacts a:focus-visible {
+  outline: 3px solid var(--focus-outline);
+  outline-offset: 3px;
+}
+
+@keyframes contact-widget-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contact-widget-ripple {
+  0% {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+
+  20% {
+    opacity: 0.72;
+  }
+
+  75%, 100% {
+    opacity: 0;
+    transform: scale(1.34);
+  }
+}
+
+@keyframes contact-widget-icon-float {
+  0%, 76%, 100% {
+    transform: translateY(0);
+  }
+
+  84% {
+    transform: translateY(-2px) rotate(-5deg);
+  }
+
+  92% {
+    transform: translateY(0) rotate(2deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-widget {
+    right: max(var(--space-3), env(safe-area-inset-right));
+    bottom: max(var(--space-3), env(safe-area-inset-bottom));
+  }
+
+  .contact-widget__card {
+    width: min(18rem, calc(100vw - 1.5rem));
+    padding: var(--space-4);
+  }
+
+  .contact-widget__launcher {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+}

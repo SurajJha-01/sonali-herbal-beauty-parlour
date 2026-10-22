@@ -1,0 +1,7 @@
+/* PageWrapper.css */
+.page-wrapper {
+  padding-top: var(--navbar-height);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

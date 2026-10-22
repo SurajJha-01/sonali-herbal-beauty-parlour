@@ -1,0 +1,104 @@
+/* Button.css */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border-radius: var(--radius-full);
+  transition: color var(--transition-base), background-color var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
+  white-space: normal;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+/* Sizes */
+.btn--sm  { padding: var(--space-2) var(--space-5);  font-size: var(--text-sm); }
+.btn--md  { padding: var(--space-3) var(--space-8);  font-size: var(--text-base); }
+.btn--lg  { padding: var(--space-4) var(--space-10); font-size: var(--text-lg); }
+.btn--full { width: 100%; }
+
+/* Primary — gold fill */
+.btn--primary {
+  background: var(--deep-plum);
+  color: var(--white);
+  border-color: var(--deep-plum);
+  box-shadow: var(--shadow-sm);
+}
+.btn--primary:hover {
+  background: var(--hover-background);
+  border-color: var(--hover-background);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+.btn--primary:active { transform: translateY(0); }
+
+/* Outline — transparent with gold border */
+.btn--outline {
+  background: transparent;
+  color: var(--deep-plum);
+  border-color: var(--deep-plum);
+}
+.btn--outline:hover {
+  background: var(--soft-blush);
+  color: var(--heading-text);
+  border-color: var(--heading-text);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Ghost — minimal */
+.btn--ghost {
+  background: transparent;
+  color: var(--main-text);
+  border-color: transparent;
+}
+.btn--ghost:hover {
+  background: var(--cream);
+  color: var(--deep-plum);
+}
+
+/* WhatsApp — green */
+.btn--whatsapp {
+  background: #15803D;
+  color: var(--white);
+  border-color: #15803D;
+}
+.btn--whatsapp:hover {
+  background: #166534;
+  border-color: #166534;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(21,128,61,0.25);
+}
+
+/* Phone — espresso */
+.btn--phone {
+  background: var(--deep-plum);
+  color: var(--white);
+  border-color: var(--deep-plum);
+}
+.btn--phone:hover {
+  transform: translateY(-1px);
+  background: var(--hover-background);
+  box-shadow: var(--shadow-md);
+}
+
+/* Disabled state */
+.btn:disabled,
+.btn[disabled] {
+  color: var(--secondary-text);
+  background: var(--border);
+  border-color: var(--border);
+  opacity: 1;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--focus-outline);
+  outline-offset: 3px;
+}
