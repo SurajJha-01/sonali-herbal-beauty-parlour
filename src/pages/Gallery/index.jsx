@@ -6,7 +6,6 @@
  * - Responsive category filters: All, Bridal Looks, Hair, Skin, Mehendi & Nails
  * - Full modal lightbox preview with keyboard navigation (Esc, Left, Right)
  * - Meaningful Hindi alt text and graceful fallback handling
- * - No unverified claims about customer identity or salon ownership
  */
 
 import React, { useState, useMemo, useEffect, useCallback, useRef } from 'react';
