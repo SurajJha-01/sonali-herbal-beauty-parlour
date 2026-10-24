@@ -4,7 +4,7 @@
  * and wraps the app in HelmetProvider for per-page SEO meta.
  */
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Layout
@@ -54,10 +54,21 @@ function SkipLink() {
   );
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [pathname]);
+
+  return null;
+}
+
 export default function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <LanguageProvider>
           <ThemeProvider>
             {/* Skip to main content — accessibility */}
